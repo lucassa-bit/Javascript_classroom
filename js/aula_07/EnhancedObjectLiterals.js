@@ -1,53 +1,46 @@
+'use strict'
+
+const diasSemana = ['sab', 'dom', 'seg', 'ter', 'qua', 'qui', 'sex']
+const horario = {
+};
+
+for (const item of diasSemana) {
+    if (item == 'sab' || item == 'dom')
+        horario[item] = { aberto: 17, fechado: 0 };
+    else
+        horario[item] = { aberto: 18, fechado: 0 };
+}
+
+const fundacao = 1990;
+
 const pizzaria = {
     nome: "Albertos Pizzaria",
     localizacao: "Rua 13 de maio 243",
     categorias: ["Iteliano", "Pizzaria", "Vegetariana", "Organica"],
     entradas: ["Focaccia", "Bruschetta", "Pão de alho"],
     pratoPrincipal: ["Pizza", "Macarrão", "Risotto"],
-    horarioFuncionamento: {
-        seg: {
-            aberto: 18,
-            fechado: 0,
-        },
-        ter: {
-            aberto: 18,
-            fechado: 0,
-        },
-        qua: {
-            aberto: 18,
-            fechado: 0,
-        },
-        qui: {
-            aberto: 18,
-            fechado: 0,
-        },
-        sex: {
-            aberto: 18,
-            fechado: 0,
-        },
-        sab: {
-            aberto: 17,
-            fechado: 0,
-        }
-    },
+    horario,
+    fundacao,
 
-    pedir: function (indexEntrada, indexPrincipal) {
+
+    pedir(indexEntrada, indexPrincipal) {
         return [this.entradas[indexEntrada], this.pratoPrincipal[indexPrincipal]];
     },
-    pedirDelivery: function ({ hora = "", endereco = "", indexEntrada = null, indexPrincipal = null }) {
+    pedirDelivery({ hora = "", endereco = "", indexEntrada = null, indexPrincipal = null }) {
         if ((indexEntrada || indexPrincipal) && Number(hora.split(":")[0]) >= 18)
             console.log(`O pedido feito as ${hora}, tem como endereço ${endereco}, e o pedido foi: ${indexEntrada && indexPrincipal ? this.entradas[indexEntrada] + " e " + this.pratoPrincipal[indexPrincipal]
-                    : indexEntrada ? this.entradas[indexEntrada] : this.pratoPrincipal[indexPrincipal]
+                : indexEntrada ? this.entradas[indexEntrada] : this.pratoPrincipal[indexPrincipal]
                 }`);
-        else 
+        else
             console.log("Erro no pedido");
     },
-    pedirMacarrao: function (ingr1, ingr2, ingr3) {
+    pedirMacarrao(ingr1, ingr2, ingr3) {
         console.log(`O pedido foi de um macarrão com: ${ingr1}, ${ingr2} e ${ingr3}`);
     },
-    pedirPizza: function(sabor, ...adicionais) {
+    pedirPizza(sabor, ...adicionais) {
         console.log("Sabor da pizza é de " + sabor);
-        if(adicionais)
+        if (adicionais.length > 0)
             console.log("Ela ainda possui como extra: " + adicionais);
     }
 };
+
