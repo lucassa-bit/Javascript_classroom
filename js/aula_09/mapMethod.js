@@ -1,11 +1,11 @@
 'use strict'
 
 const movimentosConta = [123, -231, 124, 354, -454, 234, 112];
-const convRealDolar = 1/5.18;
+const convRealDolar = 1/5.21;
 
 // MAP
 // const movimentosContaDolar = movimentosConta.map(function (mov) {
-//     return convRealDolar * mov;
+//    return convRealDolar * mov;
 // })
 // console.log(movimentosConta);
 // console.log(movimentosContaDolar);

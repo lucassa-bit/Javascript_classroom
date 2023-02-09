@@ -7,12 +7,12 @@ const contas = [{ nome: 'Alberta', despesas: [123, 231, 124, 354, 454, 234, 112]
 
 const movimentosContaNested = [[123, -231, 124], [354], -454, 234, 112];
 
-// console.log(movimentosContaNested);
-// console.log(movimentosContaNested.flat());
+console.log(movimentosContaNested);
+console.log(movimentosContaNested.flat());
 
 const movimentosContaNestedDeep = [[123, -231, [124]], [354], -454, [[[234]]], 112];
-// console.log(movimentosContaNestedDeep.flat());
-// console.log(movimentosContaNestedDeep.flat(3));
+console.log(movimentosContaNestedDeep.flat());
+console.log(movimentosContaNestedDeep.flat(3));
 
 const despesasTotais = contas.map((conta) => conta.despesas)
     .flat()

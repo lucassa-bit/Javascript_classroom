@@ -10,3 +10,4 @@ console.log(movimentosConta.some((mov) => mov > 0));
 
 // EVERY
 console.log(movimentosConta.every((mov) => mov == 24));
+console.log(movimentosConta.map(function() {return 24;}).every((mov) => mov == 24));
