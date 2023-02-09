@@ -6,11 +6,13 @@ const greet = function (greeting) {
     };
 };
 
-// const greeterHey = greet('Eae');
-// greeterHey('Felipe');
-// greeterHey('Alberto');
+const greeterHey = greet('Eae');
+console.log(greeterHey);
 
-// greet('Oi')('Carlos');
+greeterHey('Felipe');
+greeterHey('Alberto');
+
+greet('Oi')('Carlos');
 
 const greetArrow = greeting => nome => console.log(`${greeting} ${nome}`);
 

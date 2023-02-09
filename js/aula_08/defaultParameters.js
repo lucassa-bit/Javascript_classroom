@@ -2,10 +2,12 @@
 
 const passagens = [];
 
-const criarPassagem = function (numeroVoo, numPassageiros, preco) {
-    // numPassageiros ||= 1;
-    // preco ||= 220;
+const criarPassagem = function 
+(numeroVoo,
+numPassageiros = 1,
+preco = 220 * numPassageiros,
 
+) {
     const passagem = {
         numeroVoo,
         numPassageiros,
@@ -16,4 +18,4 @@ const criarPassagem = function (numeroVoo, numPassageiros, preco) {
     passagens.push(passagem);
 }
 
-criarPassagem('11142');
+criarPassagem(...['11142',, 200]);

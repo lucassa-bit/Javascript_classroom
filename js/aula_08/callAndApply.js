@@ -23,15 +23,13 @@ const joaoPessoa = {
 const pedir = recife.pedirPassagem;
 
 // Não funciona
-pedir('212', 'João Silva');
+// pedir('212', 'João Silva');
 
 // Funciona
 // Call
-pedir.call(joaoPessoa, '212', 'João Silva');
-pedir.call(recife, '232', 'Severino Alberto');
+pedir.call(recife, '453', 'Roberto Neiva');
+pedir.call(joaoPessoa, '787', 'Joao Gabriel');
 
 // Apply
-const args = [444, 'Pedro Trindade'];
-pedir.apply(joaoPessoa, args);
-
-pedir.call(recife, ...args);
+pedir.apply(joaoPessoa, ['343', 'Ana Almeida']);
+pedir.call(joaoPessoa, ...['343', 'Ana Almeida']);

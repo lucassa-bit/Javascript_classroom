@@ -8,7 +8,7 @@ const rodeUmaVez = function() {
 rodeUmaVez();
 
 // IIFE
-(function() {
+(function () {
     console.log('Isso nunca vai rodar novamente');
 })();
 

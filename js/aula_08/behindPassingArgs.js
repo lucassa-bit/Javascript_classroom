@@ -17,7 +17,7 @@ const checkIn = function (numeroVoo, passaporteDados) {
     }
 }
 
-// checkIn(numVoo, passageiro);
+checkIn(numVoo, passageiro);
 
-// console.log(numVoo);
-// console.log(passageiro);
+console.log(numVoo);
+console.log(passageiro);
