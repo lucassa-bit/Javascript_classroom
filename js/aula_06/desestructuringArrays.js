@@ -15,7 +15,7 @@ const pizzaria = {
 const arr = [2, 3, 4];
 // Descompactar o array
 
-// let [pedidoEntrada, pedidoPrincipal] = [pizzaria.entradas[1], pizzaria.pratoPrincipal[2]];
+let [pedidoEntrada, pedidoPrincipal] = [pizzaria.entradas[1], pizzaria.pratoPrincipal[2]];
 // console.log(pedidoEntrada, pedidoPrincipal);
 
 // [pedidoPrincipal, pedidoEntrada] = [pedidoEntrada, pedidoPrincipal];
