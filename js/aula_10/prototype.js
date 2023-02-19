@@ -14,6 +14,7 @@ const Pessoa = function(primeiroNome, anoNascimento) {
 Pessoa.prototype.calcIdade = function() {
     console.log(2023 - this.anoNascimento);
 };
+
 console.log(Pessoa.prototype);
 
 const usuario = new Pessoa('Roberto', 1960);
